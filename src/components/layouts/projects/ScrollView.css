@@ -1,0 +1,79 @@
+@media screen and (min-width: 799px) {
+    .ScrollView {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 96px;
+        height: 96px;
+        padding: 4px;
+        box-sizing: border-box;
+
+        background-color: #212121;
+        border-radius: 50%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        pointer-events: none;
+
+        transform: translate(-50%, -50%);
+        transition: visibility 100ms linear, transform 100ms linear;
+    }
+
+    .ScrollView
+    p {
+        color: white;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ScrollView {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ScrollView
+    p {
+        color: white;
+    }
+}
+
+.ScrollView.Visible {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1.0);
+}
+
+.ScrollView.Hidden {
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.0);
+}
+
+.ScrollView.Visible * {
+    animation: show-cursor-content 300ms linear;
+}
+
+.ScrollView.Hidden * {
+    animation: hide-cursor-content 300ms linear;
+}
+
+@keyframes show-cursor-content {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes hide-cursor-content {
+    0% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}

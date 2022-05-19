@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo / Solid</title>
+    <g id="Logo-/-Solid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M4,0 L35.0783406,0 L45.4092016,10.3612903 L14.337,10.361 L14.336,19.819 L35.0783406,19.8193548 L45.4092016,30.1806452 L14.336,30.18 L14.336,39.638 L35.0783406,39.6387097 L45.4092016,50 L12.3367347,50 L12.336,41.638 L4,41.6387097 L4,0 Z M6,39.638 L12.336,39.638 L12.336,21.819 L6,21.819 L6,39.638 Z M14.336,28.18 L40.591,28.18 L34.249,21.819 L14.336,21.819 L14.336,28.18 Z" id="Logo-/-Shape" fill="#212121" fill-rule="nonzero"></path>
+    </g>
+</svg>

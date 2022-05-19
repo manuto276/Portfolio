@@ -1,0 +1,10 @@
+.SocialList {
+    display: flex;
+    flex-direction: row;
+    margin-left: -24px;
+}
+
+.SocialList
+.Link {
+    margin-left: 24px;
+}

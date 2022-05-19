@@ -1,0 +1,25 @@
+.Link {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: #212121;
+}
+
+.Link:visited {
+    color: #212121;
+}
+
+.Link::before {
+    content: '';
+    position: absolute;
+    background-color: #212121;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    transition: width 200ms linear;
+}
+
+.Link:hover::before {
+    width: 100%;
+}

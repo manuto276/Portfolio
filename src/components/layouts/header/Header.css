@@ -1,0 +1,36 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    padding: 48px;
+    height: fit-content;
+}
+
+.Header
+.Logo {
+    height: 24px;
+}
+
+.Header
+.Navigation {
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+    margin-left: auto;
+}
+
+.Header
+.Divider {
+    background-color: #212121;
+    width: 1px;
+    height: 24px;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+
+@media screen and (max-width: 580px) {
+    .Header
+    .Divider {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}

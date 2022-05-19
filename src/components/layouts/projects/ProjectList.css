@@ -1,0 +1,30 @@
+.ProjectList {
+    flex: 1;
+}
+
+.ProjectList::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .ProjectList {
+        margin-left: -24px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ProjectList {
+        margin-top: -24px;
+        margin-bottom: -24px;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 799px) {
+    .ProjectList {
+        cursor: none;
+    }
+}

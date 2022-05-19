@@ -1,0 +1,71 @@
+.Title {
+    display: flex;
+    flex-direction: column;
+}
+
+.Title
+.SocialList {
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 320px) {
+    .Title
+    .Splash {
+        margin: 24px 48px 0;
+    }
+
+    .Title
+    p {
+        margin: 24px 48px 48px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 420px) {
+    .Title
+    .Splash {
+        margin-top: 48px;
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    .Title
+    p {
+        margin: 48px 48px;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 1024px) {
+    .Title
+    .Splash {
+        margin-top: 48px;
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+
+    .Title
+    p {
+        margin: 48px 96px;
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Title {
+        flex: 1;
+    }
+    
+    .Title
+    .Splash {
+        flex: 1;
+        margin: 48px 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Title
+    p {
+        margin: 48px 96px;
+        width: 320px;
+    }
+}
