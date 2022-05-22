@@ -172,5 +172,6 @@
 
 #DismissButton:hover
 .SvgIcon {
+    fill: var(--accent-color);
     transform: rotate(90deg);
 }
