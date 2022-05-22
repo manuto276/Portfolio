@@ -1,10 +1,10 @@
 import './Header.css';
 
-import logo from '../../../resources/logo.svg';
+import logo from '../../resources/logo.svg';
 
 import MediaQuery from "react-responsive";
-import Link from '../../ui/link/Link';
-import SvgIcon from '../../ui/icon/Icon';
+import Link from '../link/Link';
+import SvgIcon from '../icon/Icon';
 
 export default function Header(props: any) {
     return (
@@ -17,8 +17,7 @@ export default function Header(props: any) {
                 <div className="Divider"></div>
                 <Link to='mailto: emanuele.frascella256@gmail.com'>
                     <MediaQuery maxWidth={579}>
-                        {//<SvgIcon icon={'EmailOutline'} />
-                        }
+                        <SvgIcon icon={'EmailOutline'} fill='#212121' />
                     </MediaQuery>
                     <MediaQuery minWidth={580}>
                         <p className="Body">emanuele.frascella256@gmail.com</p>

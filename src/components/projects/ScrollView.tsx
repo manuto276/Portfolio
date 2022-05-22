@@ -1,8 +1,6 @@
 import MediaQuery from 'react-responsive';
+import SvgIcon from '../icon/Icon';
 import './ScrollView.css'
-
-import SvgIcon from '../../ui/icon/Icon';
-import Icon from '../../ui/icon/Icon';
 
 export default function ScrollView(props: any) {
     const view = 'View';

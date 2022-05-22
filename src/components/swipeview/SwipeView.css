@@ -1,0 +1,243 @@
+.SwipeView {
+    --swipe-duration: 300ms;
+    --border-radius: min(35vw, 35vh);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+
+    transition: visibility var(--swipe-duration) linear;
+
+    user-select: none;
+    overflow: hidden;
+}
+
+.SwipeView.Visible {
+    visibility: visible;
+}
+
+.SwipeView
+.Scrim {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.32);
+    
+    animation-name: hide-scrim;
+    animation-duration: var(--swipe-duration);
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+.SwipeView
+.Page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    
+    width: 100%;
+    height: 100%;
+    padding: 48px;
+    box-sizing: border-box;
+    background-color: #efefef;
+
+    animation-duration: var(--swipe-duration);
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+
+    overflow: scroll;
+}
+
+.SwipeView.Visible
+.Scrim {
+    animation-name: show-scrim;
+}
+
+.SwipeView
+.DismissButton
+.SvgIcon {
+    transition: all 150ms linear;
+    transform-origin: center;
+}
+
+.SwipeView
+.DismissButton:hover
+.SvgIcon {
+    fill: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+.SwipeView.LEFT
+.Page {
+    animation-name: dir-left-reverse;
+}
+
+.SwipeView.LEFT.Visible
+.Page {
+    animation-name: dir-left;
+}
+
+.SwipeView.RIGHT
+.Page {
+    animation-name: dir-right-reverse;
+}
+
+.SwipeView.RIGHT.Visible
+.Page {
+    animation-name: dir-right;
+}
+
+.SwipeView.TOP
+.Page {
+    animation-name: dir-top-reverse;
+}
+
+.SwipeView.TOP.Visible
+.Page {
+    animation-name: dir-top;
+}
+
+.SwipeView.BOTTOM
+.Page {
+    animation-name: dir-bottom-reverse;
+}
+
+.SwipeView.BOTTOM.Visible
+.Page {
+    animation-name: dir-bottom;
+}
+
+@keyframes show-scrim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    
+@keyframes hide-scrim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes dir-left {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@keyframes dir-left-reverse {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes dir-right {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@keyframes dir-right-reverse {
+    0% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+}
+
+@keyframes dir-top {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+        border-top-right-radius: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+@keyframes dir-top-reverse {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+}
+
+@keyframes dir-bottom {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+        border-bottom-right-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@keyframes dir-bottom-reverse {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}

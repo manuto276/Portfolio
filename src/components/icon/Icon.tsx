@@ -28,7 +28,6 @@ interface IconProperties {
 }
 
 const SvgIcon: React.FC<IconProperties> = ({ viewBox, size, icon, ...props }) => {
-    console.log(icon);
     return (
         <svg width={size} height={size} viewBox={viewBox} className={'SvgIcon ' + props.className} {...props}>
             {Icons[icon]()}

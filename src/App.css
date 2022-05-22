@@ -2,7 +2,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 }
 
 .Home {
@@ -16,12 +15,13 @@
 }
 
 @media screen and (max-width: 1023px) {
-    .Home {
-        overflow: scroll;
-    }
 }
 
 @media screen and (min-width: 1024px) {
+    .App {
+        overflow: hidden;
+    }
+
     .Home {
         display: flex;
         flex-direction: row;

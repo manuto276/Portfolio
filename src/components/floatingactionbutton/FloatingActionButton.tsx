@@ -12,7 +12,7 @@ function FloatingActionButton(props: FloatingActionButtonProps) {
 interface FloatingActionButtonProps {
     id?: string;
     className?: string | undefined;
-    onClick?: undefined;
+    onClick?: any;
     icon?: any;
     iconColor?: string | undefined;
     color?: string | undefined;
