@@ -25,7 +25,7 @@ interface SwipeViewProps {
     width?: string;
     children?: any;
     onDismiss?: any;
-    swipeDirection: SwipeDirection
+    swipeDirection: SwipeDirection;
 }
 
 export default SwipeView;

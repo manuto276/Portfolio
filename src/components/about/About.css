@@ -1,0 +1,61 @@
+.About {
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+.Photo {
+    object-fit: cover;
+}
+
+@media screen and (min-width: 799px) {
+    .Photo {
+        width: auto;
+        height: 240px;
+        margin-bottom: 48px;
+    }
+
+    .About {
+        width: 704px;
+        padding: 48px 48px 0px;
+    }
+
+    .Description {
+        display: flex;
+        flex-direction: row;
+        column-gap: 48px;
+    }
+
+    .Description > * {
+        flex: 1;
+    }
+
+    .Description h3 {
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .Photo {
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    .About {
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    .Description {
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+    }
+
+    .Description > * {
+        flex: 1;
+    }
+
+    .Description h3 {
+        margin-bottom: 24px;
+    }
+}

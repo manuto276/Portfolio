@@ -17,9 +17,11 @@ function App() {
   const isTablet = useMediaQuery({ minWidth: 800 });
   const isMobile = useMediaQuery({ maxWidth: 799 });
 
+  document.body.style.overflow = (showAbout || showPreview) ? 'hidden' : 'auto';
+
   return (
-    <div className='App' style={{overflow: (showAbout || showPreview) ? 'hidden' : 'auto'}}>
-      <div className='Home'>
+    <div className='App'>
+      <div className='Home' style={{overflow: (showAbout || showPreview) ? 'hidden' : 'initial'}}>
         <div className='Presentation'>
           <Header onAbout={() => setShowAbout(true)} />
           <Title />
@@ -31,7 +33,7 @@ function App() {
           <Project></Project>
         </ProjectList>
       </div>
-      <SwipeView width={isDesktop ? 'fit-content' : '100%'} visible={showAbout} onDismiss={() => setShowAbout(false)} swipeDirection={isDesktop || isTablet ? SwipeDirection.RIGHT : SwipeDirection.BOTTOM}>
+      <SwipeView width={isDesktop || isTablet ? 'fit-content' : '100%'} visible={showAbout} onDismiss={() => setShowAbout(false)} swipeDirection={isDesktop || isTablet ? SwipeDirection.RIGHT : SwipeDirection.BOTTOM}>
         <About />
       </SwipeView>
       <SwipeView width='100%' visible={showPreview} onDismiss={() => setShowPreview(false)} swipeDirection={SwipeDirection.TOP}>

@@ -2,20 +2,20 @@
     --swipe-duration: 300ms;
     --border-radius: min(35vw, 35vh);
 
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
 
-    width: 100%;
-    height: 100%;
+    z-index: 1; 
+    width: 100vw;
+    height: 100vh;
     visibility: hidden;
 
     transition: visibility var(--swipe-duration) linear;
 
-    user-select: none;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .SwipeView.Visible {
@@ -64,6 +64,11 @@
 .SwipeView.Visible
 .Scrim {
     animation-name: show-scrim;
+}
+
+.SwipeView
+.DismissButton {
+    margin-left: auto;
 }
 
 .SwipeView

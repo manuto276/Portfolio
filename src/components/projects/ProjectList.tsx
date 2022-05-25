@@ -7,7 +7,9 @@ export default function ProjectList(props: any) {
     const [cursorVisible, setCursorVisible] = React.useState(false);
 
     function CursorHelper(e: React.MouseEvent) {
-        setPosition({top: e.pageY, left: e.pageX});
+        var x = e.clientX;
+        var y = e.clientY + e.currentTarget.parentElement?.parentElement?.scrollTop!; // Yeah... wtf?
+        setPosition({top: y, left: x});
     }
 
     return (

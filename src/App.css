@@ -1,12 +1,6 @@
 .App {
     position: relative;
     width: 100vw;
-    height: 100vh;
-}
-
-.Home {
-    height: 100%;
-    width: 100%;
 }
 
 .Presentation {
@@ -15,17 +9,27 @@
 }
 
 @media screen and (max-width: 1023px) {
+    .App {
+        overflow: hidden;
+    }
+
+    .Home {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .App {
         overflow: hidden;
+        height: 100vh;
     }
 
     .Home {
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        width: 100vw;
+        height: 100vh;
     }
 
     .Presentation {
